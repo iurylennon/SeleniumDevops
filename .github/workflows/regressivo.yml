@@ -23,8 +23,9 @@ jobs:
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo apt install ./google-chrome*.deb
 
-      - uses: nanasess/setup-chromedriver@v2
-              setup-chromedriver sort:popularity-desc
+      - name: Configurar Chromedriver
+        uses: nanasess/setup-chromedriver@v2
+
       - name: Configurar Display e Chromedriver
         run: |
           export DISPLAY=:99
