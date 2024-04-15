@@ -24,8 +24,6 @@ jobs:
           sudo apt install ./google-chrome*.deb
 
       - uses: nanasess/setup-chromedriver@v2
-      - run:
-          setup-chromedriver sort:popularity-desc
 
       - name: Configurar Display e Chromedriver
         run: |
@@ -41,4 +39,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: report-execution
-          path: "**/formated-report"
+          path: "**/formated-report/"
