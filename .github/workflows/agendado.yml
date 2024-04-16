@@ -1,8 +1,8 @@
-name: Testes Regressivos - PR
+name: Testes Regressivos - Agendados
 
 on:
-  pull_request:
-    branches: [ master ]
+  schedule:
+    - cron: '*/5 * * * 1-5'
 
 jobs:
   RunTest:
@@ -53,8 +53,8 @@ jobs:
           SLACK_CHANNEL: testes
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://cdn-icons-png.flaticon.com/512/148/148767.png?size=48
-          SLACK_MESSAGE: 'Teste do PR executado com sucesso! :white_check_mark:'
-          SLACK_TITLE: 'Teste do PR executado com sucesso! :white_check_mark:'
+          SLACK_MESSAGE: 'Teste AGENDADO executado com sucesso! :check_check_mark:'
+          SLACK_TITLE: 'Teste AGENDADO executado com sucesso! :check_check_mark:'
           SLACK_USERNAME: SUCESSO
 
       - name: Enviar Notificação Slack - Falha
@@ -65,6 +65,6 @@ jobs:
           SLACK_CHANNEL: testes
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://cdn-icons-png.flaticon.com/512/148/148766.png
-          SLACK_MESSAGE: 'Erro ao executar testes do PR! :fire:'
-          SLACK_TITLE: 'Erro ao executar testes do PR! :fire:'
+          SLACK_MESSAGE: 'Erro ao executar testes AGENDADOS! :fire:'
+          SLACK_TITLE: 'Erro ao executar testes AGENDADOS! :fire:'
           SLACK_USERNAME: ERRO
