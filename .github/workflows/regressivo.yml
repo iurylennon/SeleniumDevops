@@ -36,7 +36,7 @@ jobs:
 
       - name: Gerar relatório
         if: always()
-        run: mvn clucumber-report:reporting
+        run: mvn cluecumber-report:reporting
 
       - name: Arquivar relatório
         if: always()
