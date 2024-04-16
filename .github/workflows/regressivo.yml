@@ -53,8 +53,8 @@ jobs:
           SLACK_CHANNEL: testes
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://pngmart.com/files/20/Success-PNG-Isolated-HD-Pictures.png
-          SLACK_MESSAGE: 'Teste do PR executado com sucesso! :check_check_mark:'
-          SLACK_TITLE: 'Teste do PR executado com sucesso! :check_check_mark:'
+          SLACK_MESSAGE: 'Teste do PR executado com sucesso! :white_check_mark:'
+          SLACK_TITLE: 'Teste do PR executado com sucesso! :white_check_mark:'
           SLACK_USERNAME: SUCESSO
 
       - name: Enviar Notificação Slack - Falha
